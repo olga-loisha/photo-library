@@ -1,0 +1,5 @@
+<div class="photo-grid">
+  @for (photo of favoritePhotos(); track photo.id) {
+    <app-photo-card [photo]="photo" (click)="handleClickPhoto(photo)"></app-photo-card>
+  }
+</div>

@@ -1,0 +1,24 @@
+<mat-toolbar class="app-header" color="primary">
+  <nav class="nav-links">
+    <ul>
+      <li>
+        <a
+          mat-button
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Photos
+        </a>
+      </li>
+      <li>
+        <a mat-button
+           routerLink="/favorites"
+           routerLinkActive="active"
+        >
+          Favorites
+        </a>
+      </li>
+    </ul>
+  </nav>
+</mat-toolbar>

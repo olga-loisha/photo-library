@@ -1,0 +1,11 @@
+<div class="photo-grid" appInfiniteScroll (scrolled)="loadMore()">
+  @for (photo of photos; track photo.id + '-' + $index) {
+    <app-photo-card [photo]="photo" (click)="handleClickPhoto(photo)"></app-photo-card>
+  }
+</div>
+
+@if (isLoading$ | async) {
+  <div class="spinner-container">
+    <mat-spinner diameter="40"></mat-spinner>
+  </div>
+}

@@ -1,0 +1,8 @@
+@if (photo(); as p) {
+  <div class="photo-detail">
+    <app-photo-card [photo]="p" [size]="400"></app-photo-card>
+    <button matButton (click)="remove(p.id)">Remove from favorites</button>
+  </div>
+} @else {
+  <p>Photo not found.</p>
+}
